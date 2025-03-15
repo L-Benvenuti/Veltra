@@ -30,7 +30,6 @@ body {
 }
 
 .about {
-  background-color: green;
   height: 20rem;
 }
 
@@ -45,6 +44,7 @@ body {
   padding: 1.5rem 0;
   cursor: pointer;
   transition: all 0.3s;
+  z-index: 10;
   position: fixed;
   margin-top: 4vh;
 }
@@ -80,8 +80,28 @@ body {
 }
 
 .header {
-  background-color: red;
+  background-image: linear-gradient(to right, rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.5)), url("/img/hero.jpg");
+  background-size: cover;
   height: 80vh;
+}
+
+.title {
+  color: #faf9f9;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 20vh;
+  padding: 20vh 0 0 5rem;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.title--top {
+  font-size: 18rem;
+  letter-spacing: 5rem;
+}
+.title--bottom {
+  font-size: 8rem;
+  letter-spacing: 1.1rem;
 }
 
 .sidebar {

@@ -1,4 +1,26 @@
 .header {
-    background-color: red;
+    background-image: linear-gradient(to right, rgba($color-black, 0.5), rgba($color-black, 0.5)), url("/img/hero.jpg");
+    background-size: cover;
     height: 80vh;
+}
+
+.title {
+    color: $color-grey-light-1;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20vh;
+    padding: 20vh 0 0 5rem;
+    user-select: none; 
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    &--top {
+        font-size: 18rem;
+        letter-spacing: 5rem;
+    }
+
+    &--bottom {
+        font-size: 8rem;
+        letter-spacing: 1.1rem;
+    }
 }
