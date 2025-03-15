@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -9,8 +11,22 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 body {
-    
+    font-family: "Rubik", sans-serif;
+    font-size: $font-default;
+}
+
+
+// GRID LAYOUT
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end main-start] repeat(8, minmax(min-content, 20rem)) [main-end contact-start] 8rem [contact-end];
+}
+
+.main {
+    grid-column: main-start / main-end;
 }

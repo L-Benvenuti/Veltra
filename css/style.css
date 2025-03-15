@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 *,
 *::before,
 *::after {
@@ -9,6 +10,94 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end main-start] repeat(8, minmax(min-content, 20rem)) [main-end contact-start] 8rem [contact-end];
+}
+
+.main {
+  grid-column: main-start/main-end;
+}
+
+.btn-side {
+  background-color: #004953;
+  color: #faf9f9;
+  font-family: inherit;
+  font-size: 2rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  border: none;
+  padding: 1.5rem 0;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: fixed;
+  margin-top: 4vh;
+}
+.btn-side--menu {
+  padding-right: 2rem;
+  left: 3rem;
+  border-radius: 0 4rem 4rem 0;
+}
+.btn-side--menu:hover {
+  transform: translateX(3rem);
+}
+.btn-side--contact {
+  padding-left: 2rem;
+  right: 3rem;
+  border-radius: 4rem 0 0 4rem;
+}
+.btn-side--contact:hover {
+  transform: translateX(-3rem);
+}
+.btn-side--menu:hover, .btn-side--contact:hover {
+  color: #00333a;
+}
+
+.contact {
+  grid-column: contact-start/contact-end;
+  background-color: #004953;
+}
+
+.sidebar {
+  grid-column: sidebar-start/sidebar-end;
+  background-color: #004953;
+  position: relative;
+}
+.sidebar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  transform: translateX(-100vw);
+  width: 25rem;
+  height: 100%;
+  background-color: #004953;
+}
+
+.nav {
+  padding: 5rem;
+  position: absolute;
+  transform: translateX(-100vw);
+}
+.nav__list {
+  list-style: none;
+}
+.nav__item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.nav__link {
+  text-decoration: none;
+  color: #faf9f9;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

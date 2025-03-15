@@ -1,0 +1,41 @@
+.sidebar {
+    grid-column: sidebar-start / sidebar-end;
+    background-color: $color-primary;
+
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        transform: translateX(-100vw);
+        width: 25rem;
+        height: 100%;
+        background-color: $color-primary;
+    }
+}
+
+.nav {
+    padding: 5rem;
+    
+    position: absolute;
+    transform: translateX(-100vw);
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-grey-light-1;
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+    }
+    
+}
