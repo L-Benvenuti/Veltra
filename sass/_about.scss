@@ -1,3 +1,43 @@
 .about {
-    height: 20rem;
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    position: relative;
+
+    &__icon {
+        display: block;
+        height: 20rem;
+        width: 20rem;
+        fill: rgba($color-black, 0.3);
+        
+        &:not(:last-child) {
+            margin-right: 10rem;
+        }
+    }
+}
+
+.cards-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    gap: 10rem;
+
+}
+
+.card {
+    background-color: rgba($color-primary, 0.6);
+    padding: 1.5rem 2rem;
+    width: 20rem;
+    &__title {
+        
+    }
+
+    &__text {
+
+    }
 }
